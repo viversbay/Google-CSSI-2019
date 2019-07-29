@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>welcome to meme gen</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>meme generator</h1>
+    <h2>welcome to the best meme generator out there</h2>
+    <form method = "post" action = "/result">
+      {% for url in imgs %}
+        <img src="{{url}}" height = 150px width = 150px/>
+        <input type="radio" name = "template" value = "{{url}}"/>
+      {% endfor %}
+      <br/>
+      <input type="text" name="top-line"/>
+      <br><br/>
+      <input type="text" name="bottom-line"/>
+      <input type="submit" value = "go"/>
+
+    </form>
+    <br>
+    <a href="/allmemes">all memes created</a>
+  </body>
+</html>

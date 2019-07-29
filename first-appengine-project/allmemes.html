@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>all memes created</title>
+  </head>
+  <body>
+    <h2>These are all the memes that you have created</h2>
+    {%for meme in all_memes%}
+    {{meme.topLine}}
+    <br/>
+    <img src="{{meme.memeUrl}}">
+    <br/>
+    {{meme.bottomLine}}
+    <br/>
+    <br/>
+    <br/>
+    {%endfor%}
+
+    <a href="/">click here to create another meme</a>
+  </body>
+</html>
